@@ -5,19 +5,19 @@ var version = '0.0.1';
 var trynum  = 0;
 
 var options = {
-  host: 			'host.com',
-  port: 			443,
-  path: 			'/en/content/test',
-  proto: 			https,
+  host: 'host.com',
+  port: 443,
+  path: '/en/content/test',
+  proto: https,
   headers: {
-		'User-Agent': 'creep ' + version
+     'User-Agent': 'creep ' + version
   },
-  text2search:		"<p>This is a test string, which is currently on the website and we are listening if it changes.</p>",
-  yourMail: 		'mail@host.com',
-  mailSubj: 		'creep Bot found changes!',
-  botMail:			'bot@root-server.com',
-  mailText: 		'There are changes on ',
-  crawlInterval:	100000
+  text2search: "<p>This is a test string, which is currently on the website and we are listening if it changes.</p>",
+  yourMail: 'mail@host.com',
+  mailSubj: 'creep Bot found changes!',
+  botMail: 'bot@root-server.com',
+  mailText: 'There are changes on ',
+  crawlInterval: 100000
 };
 
 
@@ -26,19 +26,19 @@ initBot();
 function initBot() {
 
 	var interval = options.crawlInterval;
-	var unit	 = 'ms';
+	var unit = 'ms';
 	
 	if(interval >= 1000) {
-		unit 		= 's';
-		interval	/= 1000; 
+		unit = 's';
+		interval /= 1000; 
 		
 		if(interval >= 60) {
-			unit 		= 'm';
-			interval	/= 60; 
+			unit = 'm';
+			interval /= 60; 
 			
 			if(interval >= 60) {
-				unit 		= 'h';
-				interval	/= 60; 
+				unit = 'h';
+				interval /= 60; 
 			}
 		}
 	}
